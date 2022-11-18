@@ -14,7 +14,7 @@
     <% if list.bookmarks.empty? %>
       <div class="card" style="background-image: url(https://i0.wp.com/www.badtaste.it/cinema/wp-content/uploads/sites/1/2022/03/nicolas-cage-meme.jpg?fit=600%2C300&quality=85&strip=all&ssl=1); background-size: 100% 100%; background-repeat: no-repeat">
     <% else %>
-      <div class="card" style="background-image: url(<%=cl_image_path @article.photo.key, height: 300, crop: :fill%>)" style="background-size: 150px">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
     <% end %>
       <%= list.name %>
       <%= link_to "Show this list", list %></div>

@@ -21,8 +21,9 @@
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
       <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
         <div class="bg-white rounded shadow h-100">
-          <%# <%= image_tag movie.poster_url, alt: movie.title, class: "movie-img rounded-top" %> %>
-          <%= cl_image_tag @list.photo.key, alt: movie.title, height: 300, width: 400, crop: :fill %>
+          <%# <% @list.photo.attached? ? cl_image_tag @list.photo.key : cl_image_tag%>
+          <%# <%= image_tag movie.poster_url, alt: movie.title, clas: "movie-img rounded-top"%>
+          <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="p-3 rounded-bottom d-flex flex-column">
             <strong><%= movie.title %> <span class="text-muted font-weight-normal">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span></strong>
             <small class="text-muted"><%= movie.overview %></small>
