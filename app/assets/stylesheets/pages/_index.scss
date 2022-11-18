@@ -1,2 +1,40 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.banner {
+  color: black;
+}
+
+.btn btn-flat {
+  font-size: 50px;
+}
+
+.card {
+  font-size: 50px;
+  border: 3px solid yellow;
+  margin: 0 auto;
+  padding: 20px;
+  height: 400px;
+  object-fit: contain;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-large {
+  height: 50vh;
+  max-height: 400px;
+}

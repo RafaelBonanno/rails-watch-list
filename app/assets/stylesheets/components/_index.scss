@@ -3,3 +3,21 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+
+.card-container {
+  display: grid;
+  border: solid 3px red;
+  justify-content: space-evenly;
+  margin: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  white-space : wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  padding: 10px;
+}

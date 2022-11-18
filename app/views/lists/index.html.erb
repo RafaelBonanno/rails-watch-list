@@ -1,0 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://sportshub.cbsistatic.com/i/2022/04/11/5e3bdc10-0036-47a8-9a11-901006ed85dd/nicolas-cage-national-treasure-disney.jpg);">
+  <div class="container">
+    <h1>WatchLists helps you build <strong>amazing movie lists</strong> to share with your <strong>friends</strong>!</h1>
+    <p>What an amazing website.</p>
+    <%= link_to(new_list_path, class: "btn btn-flat btn-lg") do %>
+    Create list !
+  <% end %>
+  </div>
+</div>
+
+<h2>Here are the lists of the other users :</h2>
+  <div class="card-container">
+    <% @lists.each do |list| %>
+    <% if list.bookmarks.empty? %>
+      <div class="card" style="background-image: url(https://i0.wp.com/www.badtaste.it/cinema/wp-content/uploads/sites/1/2022/03/nicolas-cage-meme.jpg?fit=600%2C300&quality=85&strip=all&ssl=1); background-size: 100% 100%; background-repeat: no-repeat">
+    <% else %>
+      <div class="card" style="background-image: url(<%=list.bookmarks.first.movie.poster_url%>)" style="background-size: 150px">
+    <% end %>
+      <%= list.name %>
+      <%= link_to "Show this list", list %></div>
+    <% end %>
+  </div>
